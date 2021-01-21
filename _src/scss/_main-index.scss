@@ -1,0 +1,351 @@
+/*------------------------------------*|
+  #Apllication-section
+/*------------------------------------*/
+
+.application {
+  position: relative;
+
+  padding: 95px 0px 0px 0px;
+  background: url("../img/_index/background/bg-back-mobile@1x.jpg") 0 -45px / cover no-repeat;
+
+}
+
+.application__content {
+  @media (min-width: $tablet-width) {
+    width: 320px;
+
+  }
+}
+
+.application__title {
+  margin: 0;
+  margin-bottom: 34px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  color: var(--color-white);
+}
+.application__image {
+  position: relative;
+  left: -20px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    margin-left: 140px;
+  }
+}
+.systems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  width: 204px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.systems__item {
+}
+
+.download {
+  padding: 28px 0px 38px 0px;
+  background-color: var(--color-extra-dark-blue);
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+  }
+}
+.download__button {
+  margin-bottom: 32px;
+  padding: 18px 35px;
+
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+
+  border: 3px solid var(--color-white);
+  background-color: transparent;
+  border-radius: 29px;
+  cursor: pointer;
+  transition: background-color 200ms ease 0s, color 200ms ease 0s;
+  &:hover,
+  &:focus {
+    color: var(--color-pink);
+    background-color: var(--color-white);
+    outline: none;
+  }
+  &:active {
+    span {
+      opacity: 0.3;
+    }
+  }
+}
+.download__systems {
+  margin-bottom: 27px;
+}
+.download__text {
+  margin: 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-white);
+}
+
+/*------------------------------------*|
+  #features
+/*------------------------------------*/
+.features {
+}
+.features__header {
+  margin: 46px 0px 70px 0px;
+}
+.features__title {
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.features__content {
+  background-color: var(--color-standart-gray);
+  position: relative;
+  padding: 50px 0px 0px 0px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    display: block;
+    height: 32px;
+    width: 100%;
+    background-color: var(--color-standart-gray);
+    //background: linear-gradient(to top left, var(--color-standart-gray) 50%, rgba(0, 0, 0, 0) 50%);
+    transform: translateY(-100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+}
+.features__list {
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+.features__item {
+}
+.features__item-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-black);
+}
+.features__description {
+  font-size: 14px;
+  line-height: 24px;
+}
+.features__phones {
+  width: 157px;
+  margin: 0 auto;
+}
+
+/*------------------------------------*|
+  #reviews
+/*------------------------------------*/
+.reviews {
+  padding: 50px 0px 55px 0px;
+  text-align: center;
+}
+.reviews__slider {
+}
+.reviews__list {
+  margin-bottom: 40px;
+}
+.reviews__item {
+  margin: 0;
+  padding: 0;
+}
+.slider__item {
+}
+.reviews__author-name {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+.reviews__author-status {
+  display: none;
+}
+.reviews__text {
+  font-size: 14px;
+  line-height: 30px;
+}
+.reviews__prev {
+}
+.reviews__next {
+}
+.reviews__toggles {
+}
+.reviews__button {
+  display: none;
+}
+
+/*------------------------------------*|
+  #tariff
+/*------------------------------------*/
+
+.tariff {
+  position: relative;
+  padding: 80px 0px 0px 0px;
+  background-color: var(--color-standart-gray);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    height: 20px;
+
+    background-color: var(--color-standart-gray);
+    transform: translateY(-100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+}
+.tariff__container {
+  width: 100%;
+  overflow: hidden;
+}
+.tariff__table {
+  width: 840px;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tariff__slider {
+}
+.tarriff__empty-cell {
+  display: none;
+}
+.tariff__header-cell {
+  padding: 16px 0px 22px 0px;
+  width: 280px;
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  &--hit {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 0;
+      width: 74px;
+      height: 74px;
+      background: url("../img/_index/hit-label.png") left top no-repeat;
+    }
+  }
+}
+.tariff__name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+}
+.tariff__price {
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+}
+.tariff__feature {
+  display: none;
+}
+.tariff__cell {
+  background-color: var(--color-white);
+}
+.tariff__regular-cell {
+  position: relative;
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 17px;
+    top: 19px;
+    width: 31px;
+    height: 21px;
+    background: url("../img/icons/icon-yes.svg") 0 0 / 31px 21px no-repeat;
+  }
+  &--unavailable {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 17px;
+      top: 19px;
+      width: 27px;
+      height: 27px;
+      background: url("../img/icons/icon-no.svg") 0 0 / 27px 27px no-repeat;
+    }
+  }
+}
+.tariff__cell-feature-text {
+}
+.tariff__toggles {
+  padding: 45px 0px 50px 0px;
+}
+
+/*------------------------------------*|
+  #contacts
+/*------------------------------------*/
+.contacts {
+  padding: 50px 0px 0px 0px;
+}
+.contacts__title {
+  margin-bottom: 40px;
+}
+
+.contacts__text-content {
+  margin: 0;
+  text-align: center;
+}
+.contacts__caption {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
+.contacts__text {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--color-pink);
+}
+.contacts__text a {
+  color: inherit;
+}
+.contacts__map {
+}
+.map {
+  position: relative;
+  height: 200px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 33px;
+    background-color: var(--color-white);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+}
+.map__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

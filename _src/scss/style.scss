@@ -1,0 +1,26 @@
+/**
+ * CONTENTS
+ *
+ * normalize............A level playing field.
+ * mixins...............Useful mixins.
+ * fonts................Fonts connection
+ * variables............CSS and SCSS global variables
+ * global...............Globally-available config.
+ *
+ *
+ * COMPONENTS
+ * footer.scss............The main page footer.
+ * header.scss............The main page header.
+ * main-index.scss........The main index.
+ */
+
+@import "configs/normalize.scss";
+@import "configs/mixins.scss";
+@import "configs/fonts.scss";
+@import "configs/variables.scss";
+@import "global.scss";
+@import "header.scss";
+@import "_main-index.scss";
+@import "_photo.scss";
+@import "_form.scss";
+@import "footer.scss";

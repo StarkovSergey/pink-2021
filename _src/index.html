@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>HTML Academy: Пинк</title>
+</head>
+
+
+
+<body class="page__body">
+
+  @@include('_header.html', {})
+
+
+  <main class="page-main">
+
+    <h1 class="visually-hidden">Пинк</h1>
+
+    <section class="application  section">
+
+      <div class="application__content">
+        <div class="container">
+          <h2 class="application__title section__title">Взгляните на жизнь иначе!</h2>
+          <img class="application__image" src="img/_index/content/iphone-hand-mobile@1x.png"
+            alt="Рука со смартфоном, на котором запущено приложение Пинк" height="286">
+        </div>
+        <div class="download">
+          <div class="container">
+            <button class="download__button" type="button"><span>Скачать приложение</span></button>
+            <ul class="download__systems  systems">
+              <li class="systems__item">
+                <img src="img/_index/logo-apple.svg" alt="Apple" width="47" height="56">
+              </li>
+              <li class="systems__item">
+                <img src="img/_index/logo-android.svg" alt="Android" width="43" height="47">
+              </li>
+              <li class="systems__item">
+                <img src="img/_index/logo-microsoft.svg" alt="Windows" width="44" height="41">
+              </li>
+            </ul>
+            <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+    <section class="features  section">
+      <h2 class="visually-hidden">Особенности приложение</h2>
+      <div class="container">
+        <div class="features__header">
+          <p class="features__title  section__title">Устали от серости мегаполиса?</p>
+          <p class="features__title  section__title">Нам есть, что вам предложить!</p>
+        </div>
+      </div>
+      <div class="features__content">
+        <div class="container">
+          <ul class="features__list">
+            <li class="features__item">
+              <h3 class="features__item-title">Поднимает настроение</h3>
+              <p class="features__description">
+                Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              </p>
+            </li>
+            <li class="features__item">
+              <h3 class="features__item-title">Меняет мир вокруг</h3>
+              <p class="features__description">
+                Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+              </p>
+            </li>
+            <li class="features__item">
+              <h3 class="features__item-title">Заводит новых друзей</h3>
+              <p class="features__description">
+                Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+              </p>
+            </li>
+          </ul>
+          <div class="features__phones">
+            <img src="img/_index/features-section/iphone-screen-true-mobile@1x.png"
+              alt="Скрин экрана смартфона, на котором запущен Пинк" width="157">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__slider slider">
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item  slider__item">
+              <cite class="reviews__author-name">Николай Петров
+                <span class="reviews__author-status">25 лет, водитель трамвая</span>
+              </cite>
+              <p class="reviews__text">
+                «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+                познакомился со
+                своей будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </blockquote>
+          </div>
+          <button class="reviews__prev  reviews__button  slider__button" type="button"><span
+              class="visually-hidden">Предыдущий отзыв</span></button>
+          <button class="reviews__next  reviews__button  slider__button" type="button"><span
+              class="visually-hidden">Следующий отзыв</span></button>
+          <div class="reviews__toggles slider__toggles">
+            <button class="slider__toggle slider__toggle--current" type="button"><span class="visually-hidden">Отзыв
+                1</span></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 2</span></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Отзыв 3</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="tariff">
+      <div class="tariff__container">
+        <div class="tariff__slider slider">
+          <table class="tariff__table">
+            <thead>
+              <tr>
+                <th class="tarriff__empty-cell"></th>
+                <th class="tariff__header-cell">
+                  <span class="tariff__name">База</span>
+                  <span class="tariff__price">1,99 USD</span>
+                </th>
+                <th class=" tariff__header-cell  tariff__header-cell--hit">
+                  <span class="tariff__name">СТАНДАРТ</span>
+                  <span class="tariff__price">3,99 USD</span>
+                  <strong class="visually-hidden">Хит</strong>
+                </th>
+                <th class="tariff__header-cell">
+                  <span class="tariff__name">АНЛИМ</span>
+                  <span class="tariff__price">9,99 USD</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="tariff__cell  tariff__feature">Розовый фильтр</th>
+                <td class="tariff__cell  tariff__regular-cell">
+                  <span class="tariff__cell-feature-text">Розовый фильтр</span>
+                  <span class="visually-hidden">Доступно</span>
+                </td>
+                <td class="tariff__cell  tariff__regular-cell">
+                  <span class="tariff__cell-feature-text">Розовый фильтр</span>
+                  <span class="visually-hidden">Доступно</span>
+                </td>
+                <td class="tariff__cell  tariff__regular-cell">
+                  <span class="tariff__cell-feature-text">Розовый фильтр</span>
+                  <span class="visually-hidden">Доступно</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="tariff__cell  tariff__feature">Смайлики</th>
+                <td class="tariff__cell  tariff__regular-cell tariff__regular-cell--unavailable">
+                  <span class="tariff__cell-feature-text">Смайлики</span>
+                  <span class="visually-hidden">Недоступно</span>
+                </td>
+                <td class="tariff__cell  tariff__regular-cell">
+                  <span class="tariff__cell-feature-text">Смайлики</span>
+                  <span class="visually-hidden">Доступно</span>
+                </td>
+                <td class="tariff__cell  tariff__regular-cell">
+                  <span class="tariff__cell-feature-text">Смайлики</span>
+                  <span class="visually-hidden">Доступно</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="tariff__cell  tariff__feature">Комментарии</th>
+                <td class="tariff__cell  tariff__regular-cell  tariff__regular-cell--unavailable">
+                  <span class="tariff__cell-feature-text">Комментарии</span>
+                  <span class="visually-hidden">Недоступно</span>
+                </td>
+                <td class="tariff__cell  tariff__regular-cell  tariff__regular-cell--unavailable">
+                  <span class="tariff__cell-feature-text">Комментарии</span>
+                  <span class="visually-hidden">Недоступно</span>
+                </td>
+                <td class="tariff__cell  tariff__regular-cell">
+                  <span class="tariff__cell-feature-text">Комментарии</span>
+                  <span class="visually-hidden">Доступно</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="tariff__toggles  slider__toggles">
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Тариф 1</span></button>
+            <button class="slider__toggle slider__toggle--current" type="button"><span class="visually-hidden">Тариф
+                2</span></button>
+            <button class="slider__toggle" type="button"><span class="visually-hidden">Тариф 3</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="contacts  section">
+      <div class="container">
+        <h2 class="contacts__title  section__title">Остались вопросы? Свяжитесь с нами!</h2>
+        <dl class="contacts__text-content">
+          <dt class="contacts__caption">Звоните:</dt>
+          <dd class="contacts__text">
+            <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </dd>
+          <dt class="contacts__caption">Пишите:</dt>
+          <dd class="contacts__text">
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </dd>
+          <dt class="contacts__caption">Приезжайте в гости:</dt>
+          <dd class="contacts__text">ул. Большая Конюшенная, 19/8</dd>
+        </dl>
+      </div>
+      <div class="contacts__map  map">
+        <img class="map__image" src="img/_index/background/bg-map-mobile@1x.png"
+          alt="Карта, с отметкой нашего офиса на ул. Большая Конюшенная, 19/8">
+      </div>
+
+    </section>
+  </main>
+
+
+
+
+  @@include('_footer.html', {})
+
+  <script src="js/app.min.js"></script>
+  <script src="js/vendors.js"></script>
+</body>
+
+</html>

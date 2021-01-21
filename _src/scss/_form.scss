@@ -1,0 +1,129 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+}
+.form__fieldset {
+  margin: 0;
+  padding: 40px 0;
+  border: none;
+  &--even {
+    background-color: var(--color-standart-gray);
+  }
+}
+
+.form__item {
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.form__label {
+  display: block;
+  padding-left: 23px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--color-pink);
+}
+.form__text-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  line-height: 30px;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 1px;
+  &::placeholder {
+    color: var(--color-dark-gray);
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid var(--color-dark-gray);
+  }
+  &:active {
+    border: 2px solid var(--color-pink);
+  }
+}
+
+.form__legend {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--color-pink);
+}
+.form__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.form__checkbox-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  gap: 43px;
+}
+.form__checkbox-input {
+  &:checked + .form__checkbox-label::before {
+    background-image: url("../img/icons/icon-yes--pink.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.form__checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 57px;
+  font-size: 18px;
+  line-height: 30px;
+  min-height: 35px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-light-gray);
+    border-radius: 1px;
+  }
+}
+.form__list-item {
+}
+.form__radio-input:checked  + .form__radio-label::before {
+  background-image: radial-gradient(var(--color-pink) 7px, var(--color-white) 8px);
+}
+
+.form__radio-item {
+  margin-bottom: 38px;
+}
+.form__radio-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 68px;
+  font-size: 18px;
+  line-height: 30px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 37px;
+    height: 37px;
+    background-color: var(--color-white);
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+  }
+}
+.form__button {
+}
+.form__note {
+}
+.brand-color {
+}
