@@ -1,3 +1,6 @@
+/*------------------------------------*|
+  #social
+/*------------------------------------*/
 .social {
   display: flex;
   justify-content: center;
@@ -21,7 +24,7 @@
   border: 3px solid var(--color-dark-gray-extra-opacity);
   border-radius: 50%;
   transition: border-color 200ms ease 0s;
-  &--youtube  svg {
+  &--youtube svg {
     margin-left: 5px;
   }
   &:hover,
@@ -36,9 +39,26 @@
   fill: var(--color-pink);
 }
 
+/*------------------------------------*|
+  #page-footer
+/*------------------------------------*/
 .page-footer {
   padding: 40px 0;
+  @media (min-width: $desktop-width) {
+    padding: 70px 0px 75px 0px;
+  }
 }
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 
 .logo-colorful {
   display: block;
@@ -56,12 +76,17 @@
   }
 }
 .page-footer__logo {
-  margin: 0 auto;
   margin-bottom: 45px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__social {
   margin-bottom: 40px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .page-footer__copyright {

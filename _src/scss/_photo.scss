@@ -1,36 +1,4 @@
 /*------------------------------------*|
-  #promo
-/*------------------------------------*/
-.promo {
-  padding: 95px 0px 60px 0px;
-  min-height: 237px;
-  background: url("../img/_index/background/bg-back-mobile@1x.jpg") 0 -45px / cover no-repeat;
-}
-
-.promo__title {
-  margin: 0;
-  text-align: center;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 33px;
-  color: var(--color-white);
-}
-
-/*------------------------------------*|
-  #page-description
-/*------------------------------------*/
-.page-description {
-}
-
-.page-description__text {
-  margin: 0;
-  padding: 54px 0px 60px 0px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 30px;
-}
-
-/*------------------------------------*|
   #photo
 /*------------------------------------*/
 .photo {
@@ -97,6 +65,10 @@
   display: flex;
   align-items: center;
 }
+
+/*------------------------------------*|
+  #like
+/*------------------------------------*/
 .like {
 }
 .like__button {
@@ -115,6 +87,10 @@
   height: 12px;
   flex-shrink: 0;
   fill: var(--color-pink);
+  path {
+      fill: var(--color-pink);
+    }
+    
   &:hover,
   &:focus {
     opacity: 0.5;
@@ -129,6 +105,10 @@
 }
 .like__number {
 }
+
+
+
+
 .photo__list {
   display: grid;
   grid-template-columns: 1fr;

@@ -22,26 +22,29 @@
 
     <div class="page-description">
       <div class="container">
-        <p class="page-description__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
-          вашу бонусную карту!</p>
+        <p class="page-description__text  page-description__text--cropped">Поделитесь своей историей и получите шанс
+          выиграть ценный приз — 1000 миль на
+          вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
       </div>
     </div>
 
     <form action="#" class="form">
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset  form__fieldset--introduce">
         <div class="container">
           <legend class="visually-hidden">Представтесь</legend>
-          <div class="form__item">
-            <label class="form__label" for="last-name">ФАМИЛИЯ:</label>
-            <input class="form__text-input" id="last-name" type="text" placeholder="Укажите фамилию *">
-          </div>
-          <div class="form__item">
-            <label class="form__label" for="first-name">ИМЯ:</label>
-            <input class="form__text-input" id="first-name" type="text" placeholder="Введите ваше имя *">
-          </div>
-          <div class="form__item">
-            <label class="form__label" for="patronymic">ОТЧЕСТВО:</label>
-            <input class="form__text-input" id="patronymic" type="text" placeholder="Ну и отчество тоже">
+          <div class="form__introduce-box">
+            <div class="form__item">
+              <label class="form__label" for="last-name">ФАМИЛИЯ:</label>
+              <input class="form__text-input" id="last-name" type="text" placeholder="Укажите фамилию *">
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="first-name">ИМЯ:</label>
+              <input class="form__text-input" id="first-name" type="text" placeholder="Введите ваше имя *">
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="patronymic">ОТЧЕСТВО:</label>
+              <input class="form__text-input" id="patronymic" type="text" placeholder="Ну и отчество тоже">
+            </div>
           </div>
         </div>
       </fieldset>
@@ -84,25 +87,29 @@
         </div>
       </fieldset>
 
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset  form__fieldset--contact">
         <div class="container">
-          <div class="form__item">
-            <label class="form__label" for="phone">НОМЕР
-              ТЕЛЕФОНА</label>
-            <input class="form__text-input" id="phone" type="text" placeholder="Номер, пожалуйста">
-          </div>
-          <div class="form__item">
-            <label class="form__label" for="phone">АДРЕС
-              ПОЧТЫ</label>
-            <input class="form__text-input" id="phone" type="email" placeholder="Введите почту *">
+          <legend class="form__legend">контактная информация</legend>
+          <div class="contact-box">
+            <div class="form__item  form__item--phone  concact-box__item">
+              <label class="form__label" for="phone">НОМЕР
+                ТЕЛЕФОНА</label>
+              <input class="form__text-input  form__text-input--icon" id="phone" type="text"
+                placeholder="Номер, пожалуйста">
+            </div>
+            <div class="form__item  form__item--email  concact-box__item">
+              <label class="form__label" for="email">АДРЕС
+                ПОЧТЫ</label>
+              <input class="form__text-input  form__text-input--icon" id="email" type="email"
+                placeholder="Введите почту *">
+            </div>
           </div>
         </div>
       </fieldset>
 
-      <fieldset class="form__fieldset  form__fieldset--even">
-        <div class="container">
-          <legend class="form__legend">С каким приложением
-            путешествовали?</legend>
+      <fieldset class="form__fieldset  form__fieldset--even  form__fieldset--radio">
+        <div>
+          <legend class="form__legend">С каким приложением путешествовали?</legend>
           <ul class="form__list  form__radio-list">
             <li class="form__radio-item">
               <input class="visually-hidden  form__radio-input" type="radio" value="iOS" id="radio-iOS" name="app">
@@ -120,19 +127,19 @@
               <label class="form__radio-label" for="radio-windows">Windows Phone</label>
             </li>
           </ul>
+
         </div>
       </fieldset>
 
-      <fieldset class="form__fieldset">
-        <div class="container">
-          <legend class="form__legend">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
-          <textarea name="emotions"></textarea>
-        </div>
+      <fieldset class="form__fieldset  form__fieldset--container">
+        <legend class="form__legend">ОПИШИТЕ СВОИ ЭМОЦИИ</legend>
+        <textarea class="form__textarea" name="emotions"
+          placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </fieldset>
 
       <div class="form__bottom">
         <div class="container">
-          <button class="form__button  button" type="submit"></button>
+          <button class="form__button  button" type="submit">Отправить форму</button>
           <p class="form__note"><span class="brand-color">*</span> — обязательные поля</p>
         </div>
       </div>
@@ -167,6 +174,7 @@
   </div>
   <script src="js/app.min.js"></script>
   <script src="js/vendors.js"></script>
+  <script src="js/files/header.js"></script>
 </body>
 
 </html>
