@@ -88,13 +88,20 @@
 
       <div class="photo__panorama  photo-item  panorama">
         <div class="panorama__image  photo-item__image">
-          <a href="#">
-            <img src="img/_photo/panorama/panorama-mobile@1x.jpg" alt="" width="320" height="137">
+          <a class="panorama__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/_photo/panorama/panorama-desktop@1x.jpg 1x, img/_photo/panorama/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/_photo/panorama/panorama-tablet@1x.jpg 1x, img/_photo/panorama/panorama-tablet@2x.jpg 2x">
+              <img src="img/_photo/panorama/panorama-mobile@1x.jpg"
+                srcset="img/_photo/panorama/panorama-mobile@2x.jpg 2x" alt="">
+            </picture>
             <div class="panorama__text">Панорама дня</div>
           </a>
         </div>
         <div class="container">
-          <div class="photo-item__info info">
+          <div class="photo-item__info info  info--panorama">
             <div class="info__header">
               <span class="info__user-name">Анна</span>
               <span class="info__time">(5 минут назад)</span>
@@ -130,9 +137,16 @@
 
           <li class="photo__item photo-item">
             <div class="photo-item__image">
-              <a href="#">
-                <img src="img/_photo/photo-car/photo-car-mobile@1x.jpg" alt="фото пользователя" width="280"
-                  height="180">
+              <a class="photo-item__link" href="#">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/_photo/photo-car/photo-car-desktop@1x.jpg 1x, img/_photo/photo-car/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width:660px)"
+                    srcset="img/_photo/photo-car/photo-car-tablet@1x.jpg 1x, img/_photo/photo-car/photo-car-tablet@2x.jpg 2x">
+                  <img src="img/_photo/photo-car/photo-car-mobile@1x.jpg"
+                    srcset="img/_photo/photo-car/photo-car-mobile@2x.jpg 2x" alt="фото пользователя" width="280"
+                    height="180">
+                </picture>
               </a>
               <div class="photo-item__info info">
                 <div class="info__header">
@@ -162,9 +176,16 @@
 
           <li class="photo__item photo-item">
             <div class="photo-item__image">
-              <a href="#">
-                <img src="img/_photo/photo-drumset/photo-drumset-mobile@1x.jpg" alt="фото пользователя" width="280"
-                  height="180">
+              <a class="photo-item__link" href="#">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/_photo/photo-drumset/photo-drumset-desktop@1x.jpg 1x, img/_photo/photo-drumset/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width:660px)"
+                    srcset="img/_photo/photo-drumset/photo-drumset-tablet@1x.jpg 1x, img/_photo/photo-drumset/photo-drumset-tablet@2x.jpg 2x">
+                  <img src="img/_photo/photo-drumset/photo-drumset-mobile@1x.jpg"
+                    srcset="img/_photo/photo-drumset/photo-drumset-mobile@2x.jpg 2x" alt="фото пользователя" width="280"
+                    height="180">
+                </picture>
               </a>
               <div class="photo-item__info info">
                 <div class="info__header">
@@ -194,9 +215,16 @@
 
           <li class="photo__item photo-item">
             <div class="photo-item__image">
-              <a href="#">
-                <img src="img/_photo/photo-window/photo-window-mobile@1x.jpg" alt="фото пользователя" width="280"
-                  height="180">
+              <a class="photo-item__link" href="#">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/_photo/photo-window/photo-window-desktop@1x.jpg 1x, img/_photo/photo-window/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width:660px)"
+                    srcset="img/_photo/photo-window/photo-window-tablet@1x.jpg 1x, img/_photo/photo-window/photo-window-tablet@2x.jpg 2x">
+                  <img src="img/_photo/photo-window/photo-window-mobile@1x.jpg"
+                    srcset="img/_photo/photo-window/photo-window-mobile@2x.jpg 2x" alt="фото пользователя" width="280"
+                    height="180">
+                </picture>
               </a>
               <div class="photo-item__info info">
                 <div class="info__header">
@@ -226,9 +254,16 @@
 
           <li class="photo__item photo-item">
             <div class="photo-item__image">
-              <a href="#">
-                <img src="img/_photo/photo-fair/photo-fair-mobile@1x.jpg" alt="фото пользователя" width="280"
-                  height="180">
+              <a class="photo-item__link" href="#">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/_photo/photo-fair/photo-fair-desktop@1x.jpg 1x, img/_photo/photo-fair/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width:660px)"
+                    srcset="img/_photo/photo-fair/photo-fair-tablet@1x.jpg 1x, img/_photo/photo-fair/photo-fair-tablet@2x.jpg 2x">
+                  <img src="img/_photo/photo-fair/photo-fair-mobile@1x.jpg"
+                    srcset="img/_photo/photo-fair/photo-fair-mobile@2x.jpg 2x" alt="фото пользователя" width="280"
+                    height="180">
+                </picture>
               </a>
               <div class="photo-item__info info">
                 <div class="info__header">
@@ -258,9 +293,16 @@
 
           <li class="photo__item photo-item">
             <div class="photo-item__image">
-              <a href="#">
-                <img src="img/_photo/photo-mountain/photo-pov-mobile@2x.jpg" alt="фото пользователя" width="280"
-                  height="180">
+              <a class="photo-item__link" href="#">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/_photo/photo-mountain/photo-pov-desktop@1x.jpg 1x, img/_photo/photo-mountain/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width:660px)"
+                    srcset="img/_photo/photo-mountain/photo-pov-tablet@1x.jpg 1x, img/_photo/photo-mountain/photo-pov-tablet@2x.jpg 2x">
+                  <img src="img/_photo/photo-mountain/photo-pov-mobile@1x.jpg"
+                    srcset="img/_photo/photo-mountain/photo-pov-mobile@2x.jpg 2x" alt="фото пользователя" width="280"
+                    height="180">
+                </picture>
               </a>
               <div class="photo-item__info info">
                 <div class="info__header">
@@ -288,13 +330,18 @@
             </div>
           </li>
 
-          
-
           <li class="photo__item photo-item">
             <div class="photo-item__image">
-              <a href="#">
-                <img src="img/_photo/photo-wing/photo-wing-tablet@1x.jpg" alt="фото пользователя" width="280"
-                  height="180">
+              <a class="photo-item__link" href="#">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/_photo/photo-wing/photo-wing-desktop@1x.jpg 1x, img/_photo/photo-wing/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width:660px)"
+                    srcset="img/_photo/photo-wing/photo-wing-tablet@1x.jpg 1x, img/_photo/photo-wing/photo-wing-tablet@2x.jpg 2x">
+                  <img src="img/_photo/photo-wing/photo-wing-mobile@1x.jpg"
+                    srcset="img/_photo/photo-wing/photo-wing-mobile@2x.jpg 2x" alt="фото пользователя" width="280"
+                    height="180">
+                </picture>
               </a>
               <div class="photo-item__info info">
                 <div class="info__header">
@@ -321,6 +368,7 @@
               </div>
             </div>
           </li>
+
         </ul>
 
         <p class="photo__text">Затмите их всех!<br>
@@ -336,7 +384,7 @@
       <h2 class="visually-hidden">Выложить фотографию</h2>
       <div class="container">
         <form class="editor__form">
-  
+
           <div class="editor__file file">
             <input class="file__input" type="file">
             <div class="file__image">
@@ -344,7 +392,7 @@
               <button class="file__button">Прикрепить фото</button>
             </div>
           </div>
-  
+
           <div class="editor__toolbox toolbox">
             <div class="toolbox__item">
               <button class="toolbox__button">
@@ -364,8 +412,8 @@
                 <div class="toolbox__toggle" tabindex="0"></div>
               </div>
             </div>
-  
-  
+
+
             <div class="toolbox__item">
               <div>
                 <button class="toolbox__button">
@@ -386,7 +434,7 @@
                   <div class="toolbox__toggle" tabindex="0"></div>
                 </div>
               </div>
-    
+
               <div class="toolbox__item">
                 <button class="toolbox__button">
                   <span class="visually-hidden">Контраст</span>
@@ -407,10 +455,10 @@
                 </div>
               </div>
               </p>
-          </div>
-  
-          <button class="editor__button" type="submit">Запостить</button>
-          <button class="editor__button" type="button" disabled>Отмена</button>
+            </div>
+
+            <button class="editor__button" type="submit">Запостить</button>
+            <button class="editor__button" type="button" disabled>Отмена</button>
         </form>
       </div>
 
@@ -499,9 +547,9 @@
   </div>
 </footer>
 
-    <script src="js/app.min.js"></script>
-    <script src="js/vendors.js"></script>
-    <script src="js/files/header.js"></script>
+  <script src="js/app.min.js"></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/files/header.js"></script>
 </body>
 
 </html>

@@ -126,8 +126,17 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
+  transition: color 200ms ease 0s;
   @media (min-width: $desktop-width) {
     text-transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-pink);
+  }
+  &:active {
+    color: var(--color-white-opacity);
   }
 }
 
