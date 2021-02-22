@@ -133,10 +133,14 @@ img {
 /*------------------------------------*/
 
 .logo {
+  position: relative;
+  z-index: 1;
   display: block;
-  height: 23px;
-  width: 74px;
-  //flex-shrink: 0;
+  // height: 23px;
+  // width: 74px;
+  cursor: pointer;
+  fill: var(--color-white);
+  flex-shrink: 0;
   &:hover svg,
   &:focus svg {
     fill: var(--color-pink);
@@ -146,23 +150,59 @@ img {
     fill: #ffffff;
     opacity: 0.3;
   }
+  &:active .login__svg-star {
+    fill: #ffffff;
+  }
 }
 
-.logo-colorful {
-  display: block;
-  width: 145px;
-  &:hover .logo-colorful__text,
-  &:focus .logo-colorful__text {
-    fill: var(--color-pink);
-    transition: fill 200ms ease 0s;
-  }
-  &:active {
-    opacity: 0.3;
-  }
-  &:active .logo-colorful__text {
-    fill: var(--color-dark-blue);
+.logo__svg {
+  height: 23px;
+  width: 74px;
+  @media (min-width: $tablet-width) {
+    width: 147px;
+    height: 42px;
   }
 }
+
+.logo__mobile {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.logo__tablet {
+  display: none;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.login__svg-star {
+  fill: var(--color-pink);
+}
+
+.logo__desktop {
+  display: none;
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+// .logo-colorful {
+//   display: block;
+//   width: 145px;
+//   &:hover .logo-colorful__text,
+//   &:focus .logo-colorful__text {
+//     fill: var(--color-pink);
+//     transition: fill 200ms ease 0s;
+//   }
+//   &:active {
+//     opacity: 0.3;
+//   }
+//   &:active .logo-colorful__text {
+//     fill: var(--color-dark-blue);
+//   }
+// }
 
 /*------------------------------------*|
   #Button

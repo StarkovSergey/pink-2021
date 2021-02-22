@@ -533,9 +533,13 @@ img {
 /*------------------------------------*/
 
 .logo {
+  position: relative;
+  z-index: 1;
   display: block;
-  height: 23px;
-  width: 74px;
+  cursor: pointer;
+  fill: var(--color-white);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .logo:hover svg,
@@ -550,24 +554,25 @@ img {
   opacity: 0.3;
 }
 
-.logo-colorful {
-  display: block;
-  width: 145px;
+.logo:active .login__svg-star {
+  fill: #ffffff;
 }
 
-.logo-colorful:hover .logo-colorful__text,
-.logo-colorful:focus .logo-colorful__text {
+.logo__svg {
+  height: 23px;
+  width: 74px;
+}
+
+.logo__tablet {
+  display: none;
+}
+
+.login__svg-star {
   fill: var(--color-pink);
-  -webkit-transition: fill 200ms ease 0s;
-  transition: fill 200ms ease 0s;
 }
 
-.logo-colorful:active {
-  opacity: 0.3;
-}
-
-.logo-colorful:active .logo-colorful__text {
-  fill: var(--color-dark-blue);
+.logo__desktop {
+  display: none;
 }
 
 /*------------------------------------*|
@@ -643,7 +648,7 @@ img {
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-bottom: -66px;
+  margin-bottom: -70px;
   background-color: var(--color-black-opacity);
 }
 
@@ -719,7 +724,7 @@ img {
 }
 
 .main-navigation__link:active {
-  color: var(--color-white-opacity);
+  color: var(--color-white-opacityg);
 }
 
 .main-navigation--no-js .main-navigation__toggle {
@@ -1914,6 +1919,15 @@ img {
     line-height: 54px;
   }
 
+  .logo__svg {
+    width: 147px;
+    height: 42px;
+  }
+
+  .logo__mobile {
+    display: none;
+  }
+
   .button {
     width: 295px;
   }
@@ -2360,6 +2374,10 @@ img {
     line-height: 68px;
   }
 
+  .logo__desktop {
+    display: block;
+  }
+
   .page-description__text {
     max-width: 756px;
   }
@@ -2773,6 +2791,10 @@ img {
 }
 
 @media (min-width: 660px) and (max-width: 1200px) {
+  .logo__tablet {
+    display: block;
+  }
+
   .tariff__header-cell--hit::before {
     width: 61px;
     height: 61px;
