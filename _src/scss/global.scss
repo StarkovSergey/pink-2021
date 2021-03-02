@@ -153,6 +153,10 @@ img {
   &:active .login__svg-star {
     fill: #ffffff;
   }
+
+  @media (max-width: $mobile-width-only) {
+    height: 23px;
+  }
 }
 
 .logo__svg {
@@ -177,16 +181,34 @@ img {
   }
 }
 
-.login__svg-star {
+.logo__svg-star {
   fill: var(--color-pink);
 }
 
-.logo__desktop {
+.logo-colorful--tablet {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.logo__desktop, 
+.logo-colorful--desktop {
   display: none;
   @media (min-width: $desktop-width) {
     display: block;
   }
 }
+
+.logo__svg-blue-star,
+.logo-colorful__text {
+  fill: var(--color-dark-blue);
+}
+
+.logo-colorful:hover .logo__svg-blue-star,
+.logo-colorful:hover .logo-colorful__text {
+  fill: var(--color-pink);
+}
+
 
 // .logo-colorful {
 //   display: block;
@@ -222,6 +244,8 @@ img {
   border: none;
   text-align: center;
   cursor: pointer;
+
+  transition: background-color 200ms ease 0s;
 
   &:hover,
   &:focus {

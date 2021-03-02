@@ -11,7 +11,31 @@
 
 
 <body class="page__body">
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-heart">
+      <path
+        d="M6.982 1.483A3.33 3.33 0 019.07.75a3.263 3.263 0 012.258.906c.593.574.921 1.345.921 2.144h0v.012a2.66 2.66 0 01-.721 1.857h0l-.007.007-5.038 5.56-.002.002a.748.748 0 00-.042.003C5.24 9.92 4.332 8.922 3.634 8.156a960.18 960.18 0 01-1.111-1.222c-.373-.41-.623-.69-.79-.88a8.583 8.583 0 01-.231-.276l-.014-.018h0a.749.749 0 00-.048-.065A3.015 3.015 0 01.75 3.8a2.973 2.973 0 01.504-1.63c.327-.49.795-.883 1.35-1.13A3.34 3.34 0 014.392.78c.61.08 1.18.324 1.646.702a.75.75 0 00.945.001z"
+        stroke="#D22856" stroke-width="1.5" stroke-linejoin="round" />
+    </symbol>
 
+    <symbol id="icon-crop" viewBox="0 0 44 44">
+      <path fill="none" d="M0 0h48v48H0V0z" />
+      <path d="M34 30h4V14c0-2.21-1.79-4-4-4H18v4h16v16zm-20 4V2h-4v8H2v4h8v20c0 2.21 1.79 4 4 4h20v8h4v-8h8v-4H14z" />
+    </symbol>
+
+    <symbol id="icon-fill" viewBox="0 0 48 43">
+      <path fill="none" d="M0 0h48v48H0V0z" />
+      <path
+        d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 000 4.24l11 11c.58.59 1.35.88 2.12.88s1.54-.29 2.12-.88l11-11a3 3 0 000-4.24zM10.41 20L20 10.42 29.59 20H10.41zM38 23s-4 4.33-4 7c0 2.21 1.79 4 4 4s4-1.79 4-4c0-2.67-4-7-4-7zM0 40h48v3H0z" />
+    </symbol>
+    <symbol id="icon-contrast" viewBox="-35.422 -7.96 31.92 31.92">
+      <path
+        d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z" />
+      <path d="M-19.462 16.331a8.519 8.519 0 008.52-8.52 8.518 8.518 0 00-8.52-8.519" />
+    </symbol>
+  </svg>
+
+  @@include('_svg-sprite.html', {})
   @@include('_header.html', {})
 
   <main class="page-main">
@@ -44,6 +68,11 @@
         <div class="panorama__image  photo-item__image">
           <a class="panorama__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/_photo/panorama/panorama-desktop@1x.jpg 1x, img/_photo/panorama/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/_photo/panorama/panorama-tablet@1x.jpg 1x, img/_photo/panorama/panorama-tablet@2x.webp 2x">
+
               <source media="(min-width: 1200px)"
                 srcset="img/_photo/panorama/panorama-desktop@1x.jpg 1x, img/_photo/panorama/panorama-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)"
@@ -68,14 +97,17 @@
             <div class="info__like-row  like">
               <button class="like__button" type="button">
                 <span class="visually-hidden">Нравится</span>
-                <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <!-- <svg class="like__symbol" width="13" height="12" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
+                    viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
+                    xml:space="preserve">
+                    <g>
+                      <path
+                        d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
+                    </g>
+                  </svg> -->
+                <svg class="like__symbol" width="13" height="12">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
 
               </button>
@@ -112,14 +144,8 @@
                 </p>
                 <div class="info__like-row  like">
                   <button class="like__button" type="button"><span class="visually-hidden">Нравится</span>
-                    <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                      viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                      xml:space="preserve">
-                      <g>
-                        <path
-                          d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                      </g>
+                    <svg class="like__symbol" width="13" height="12">
+                      <use xlink:href="#icon-heart"></use>
                     </svg>
                   </button>
                   <span class="like__text">Нравится: <span class="like__number">356</span></span>
@@ -151,14 +177,8 @@
                 </p>
                 <div class="info__like-row  like">
                   <button class="like__button" type="button"><span class="visually-hidden">Нравится</span>
-                    <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                      viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                      xml:space="preserve">
-                      <g>
-                        <path
-                          d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                      </g>
+                    <svg class="like__symbol" width="13" height="12">
+                      <use xlink:href="#icon-heart"></use>
                     </svg>
                   </button>
                   <span class="like__text">Нравится: <span class="like__number">666</span></span>
@@ -190,14 +210,8 @@
                 </p>
                 <div class="info__like-row  like">
                   <button class="like__button" type="button"><span class="visually-hidden">Нравится</span>
-                    <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                      viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                      xml:space="preserve">
-                      <g>
-                        <path
-                          d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                      </g>
+                    <svg class="like__symbol" width="13" height="12">
+                      <use xlink:href="#icon-heart"></use>
                     </svg>
                   </button>
                   <span class="like__text">Нравится: <span class="like__number">215</span></span>
@@ -229,14 +243,8 @@
                 </p>
                 <div class="info__like-row  like">
                   <button class="like__button" type="button"><span class="visually-hidden">Нравится</span>
-                    <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                      viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                      xml:space="preserve">
-                      <g>
-                        <path
-                          d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                      </g>
+                    <svg class="like__symbol" width="13" height="12">
+                      <use xlink:href="#icon-heart"></use>
                     </svg>
                   </button>
                   <span class="like__text">Нравится: <span class="like__number">4</span></span>
@@ -268,14 +276,8 @@
                 </p>
                 <div class="info__like-row  like">
                   <button class="like__button" type="button"><span class="visually-hidden">Нравится</span>
-                    <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                      viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                      xml:space="preserve">
-                      <g>
-                        <path
-                          d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                      </g>
+                    <svg class="like__symbol" width="13" height="12">
+                      <use xlink:href="#icon-heart"></use>
                     </svg>
                   </button>
                   <span class="like__text">Нравится: <span class="like__number">150</span></span>
@@ -307,14 +309,8 @@
                 </p>
                 <div class="info__like-row  like">
                   <button class="like__button" type="button"><span class="visually-hidden">Нравится</span>
-                    <svg class="like__symbol" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="12px"
-                      viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                      xml:space="preserve">
-                      <g>
-                        <path
-                          d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                      </g>
+                    <svg class="like__symbol" width="13" height="12">
+                      <use xlink:href="#icon-heart"></use>
                     </svg>
                   </button>
                   <span class="like__text">Нравится: <span class="like__number">2560</span></span>
@@ -337,26 +333,40 @@
     <section class="editor">
       <h2 class="visually-hidden">Выложить фотографию</h2>
       <div class="container">
+
         <form class="editor__form">
 
           <div class="editor__file file">
-            <input class="file__input" type="file">
-            <div class="file__image">
-              <img src="img/_photo/photo-winter-road/photo-road-mobile@1x.jpg" alt="">
-              <button class="file__button">Прикрепить фото</button>
-            </div>
+            <input class="file__input" id="file-input" type="file" accept=".jpg, .jpeg, .png">
+            <label class="visually-hidden" for="file-input">Прикрепить фотографию</label>
+            <picture>
+              <source media="(min-width: 1200px)"
+                src="img/_photo/photo-winter-road/photo-road-desktop@1x.jpg 1x, img/_photo/photo-winter-road/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 600px)"
+                srcset="img/_photo/photo-winter-road/photo-road-tablet@1x.jpg 1x, img/_photo/photo-winter-road/photo-road-tablet@2x.jpg 2x">
+              <img class="file__image" src="img/_photo/photo-winter-road/photo-road-mobile@1x.jpg"
+                srcset="img/_photo/photo-winter-road/photo-road-mobile@2x.jpg 2x" alt="Загруженная фотография">
+            </picture>
           </div>
 
           <div class="editor__toolbox toolbox">
+            <div class="toolbox__item  toolbox__item--active">
+              <button class="toolbox__button" aria-label="Обрезать">
+                <svg class="toolbox__icon  toolbox__icon--active" width="44" height="44">
+                  <use xlink:href="#icon-crop"></use>
+                </svg>
+              </button>
+              <div class="toolbox__control">
+                <div class="toolbox__scale"></div>
+                <div class="toolbox__toggle" tabindex="0" style="left: 80%"></div>
+              </div>
+            </div>
+
+
             <div class="toolbox__item">
-              <button class="toolbox__button">
-                <span class="visually-hidden">Обрезать</span>
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="44" height="44" viewBox="0 0 44 44"
-                  enable-background="new 0 0 48 48" xml:space="preserve">
-                  <path fill="none" d="M0,0h48v48H0V0z" />
-                  <path
-                    d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
+              <button class="toolbox__button" aria-label="Залить">
+                <svg class="toolbox__icon  toolbox__icon--fill" width="48" height="43">
+                  <use xlink:href="#icon-fill"></use>
                 </svg>
               </button>
               <div class="toolbox__control">
@@ -369,50 +379,26 @@
 
 
             <div class="toolbox__item">
-              <div>
-                <button class="toolbox__button">
-                  <span class="visually-hidden">Залить</span>
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="43px"
-                    xml:space="preserve">
-                    <path fill="none" d="M0,0h48v48H0V0z" />
-                    <path
-                      d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z" />
-                    <rect y="40" width="48" height="3" />
-                  </svg>
-                </button>
-                <div class="toolbox__control">
-                  <div class="toolbox__scale">
-                    <div class="toolbox__bar"></div>
-                  </div>
-                  <div class="toolbox__toggle" tabindex="0"></div>
+              <button class="toolbox__button" aria-label="Контраст">
+                <svg class="toolbox__icon  toolbox__icon--contrast" width="32" height="32">
+                  <use xlink:href="#icon-contrast"></use>
+                </svg>
+              </button>
+              <div class="toolbox__control">
+                <div class="toolbox__scale">
+                  <div class="toolbox__bar"></div>
                 </div>
+                <div class="toolbox__toggle" tabindex="0"></div>
               </div>
-
-              <div class="toolbox__item">
-                <button class="toolbox__button">
-                  <span class="visually-hidden">Контраст</span>
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32" height="32"
-                    viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92"
-                    xml:space="preserve">
-                    <path fill="#231F20"
-                      d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z" />
-                    <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
-                  </svg>
-                </button>
-                <div class="toolbox__control">
-                  <div class="toolbox__scale">
-                    <div class="toolbox__bar"></div>
-                  </div>
-                  <div class="toolbox__toggle" tabindex="0"></div>
-                </div>
-              </div>
-              </p>
             </div>
+          </div>
 
-            <button class="editor__button" type="submit">Запостить</button>
-            <button class="editor__button" type="button" disabled>Отмена</button>
+          
+          <div class="editor__button-box">
+            <button class="editor__button" type="submit"><span>Запостить</span></button>
+            <button class="editor__button  editor__button--cancel" type="button"><span>Отмена</span></button>
+          </div>
+
         </form>
       </div>
 

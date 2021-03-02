@@ -9,7 +9,7 @@
 </head>
 
 <body class="page__body">
-
+  @@include('_svg-sprite.html', {})
   @@include('_header.html', {})
 
   <main class="page-main">
@@ -95,13 +95,13 @@
               <label class="form__label" for="phone">НОМЕР
                 ТЕЛЕФОНА</label>
               <input class="form__text-input  form__text-input--icon" id="phone" type="text"
-                placeholder="Номер, пожалуйста">
+                placeholder="Номер, пожалуйста" autocomplete="off">
             </div>
             <div class="form__item  form__item--email  concact-box__item">
               <label class="form__label" for="email">АДРЕС
                 ПОЧТЫ</label>
               <input class="form__text-input  form__text-input--icon" id="email" type="email"
-                placeholder="Введите почту *">
+                placeholder="Введите почту *" autocomplete="off">
             </div>
           </div>
         </div>

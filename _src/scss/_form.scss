@@ -172,14 +172,16 @@
   line-height: 30px;
   border: 2px solid var(--color-light-gray);
   border-radius: 1px;
+  transition: border 200ms ease 0s;
   &::placeholder {
     color: var(--color-dark-gray);
   }
-  &:hover,
-  &:focus {
+  &:hover {
     border: 2px solid var(--color-dark-gray);
   }
+  &:focus,
   &:active {
+    outline: none;
     border: 2px solid var(--color-pink);
   }
   @media (min-width: $tablet-width) {
@@ -215,7 +217,7 @@
   &:hover + .form__checkbox-label::before,
   &:focus + .form__checkbox-label::before {
     border-color: var(--color-dark-gray);
-    transition: border-color 200ms ease 0s;
+    transition: border-color 300ms ease 0s;
   }
   &:active + .form__checkbox-label::before {
     border-color: var(--color-pink);
@@ -253,7 +255,7 @@
   &:hover + .form__radio-label::before,
   &:focus + .form__radio-label::before {
     border-color: var(--color-dark-gray);
-    transition: border-color 200ms ease 0s;
+    transition: border-color 300ms ease 0s;
   }
   &:active + .form__radio-label::before {
     border-color: var(--color-pink);
@@ -308,14 +310,16 @@
   line-height: 30px;
   border: 2px solid var(--color-light-gray);
   border-radius: 1px;
+  transition: border-color 300ms ease 0s;
   &::placeholder {
     color: var(--color-dark-gray);
   }
-  &:hover,
-  &:focus {
+  &:hover {
     border: 2px solid var(--color-dark-gray);
   }
+  &:focus,
   &:active {
+    outline: none;
     border: 2px solid var(--color-pink);
   }
 }
