@@ -32,7 +32,7 @@ const typograf = require('gulp-typograf');
 const scripts = () => {
   return gulp.src("_src/js/**/*.js")
     .pipe(uglify())
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("docs/js"))
     .pipe(sync.stream());
 }
 //добавить переименование минифицированных файлов
@@ -48,7 +48,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(sync.stream());
 }
 
@@ -60,12 +60,12 @@ const html = () => {
       removeComments: true,
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 }
 
 const images = () => {
   return gulp.src("_src/img/**/*.{jpg,png,svg}")
-    .pipe(newer("build/img"))  //чтобы не отпимизировать заново. Но есть ли смысл, если мы вычищаем билд? Проверить.
+    .pipe(newer("docs/img"))  //чтобы не отпимизировать заново. Но есть ли смысл, если мы вычищаем билд? Проверить.
     //Вадим Макеев вообше не сжимает картинки при сборке
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
@@ -76,17 +76,17 @@ const images = () => {
         ]
       })
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 const cleanimg = () => {
-  return del('build/img/**/*');
+  return del('docs/img/**/*');
 }
 
 const createWebp = () => {
   return gulp.src("_src/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 }
 
 const sprite = () => {
@@ -100,7 +100,7 @@ const sprite = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'docs'
     },
     cors: true,
     notify: false,
@@ -119,7 +119,7 @@ const watcher = () => {
   gulp.watch("_src/img/**/*.{jpg,png,svg}", images);
 }
 
-//копируем файлы в папку build
+//копируем файлы в папку docs
 const copy = () => {
   return gulp.src([
     "_src/fonts/**/*.{woff,woff2}",
@@ -129,11 +129,11 @@ const copy = () => {
   ], {
     base: 'source'
   })
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 }
 
 const clean = () => {
-  return del('build');
+  return del('docs');
 }
 
 const build = gulp.series(
