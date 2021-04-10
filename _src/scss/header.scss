@@ -20,10 +20,11 @@
     justify-content: space-between;
     max-width: 940px;
     margin: 0 auto;
+
     .container {
-      padding: 0;
       width: auto;
       margin: 0;
+      padding: 0;
     }
   }
 }
@@ -45,9 +46,11 @@
     display: flex;
     background-color: transparent;
   }
+
   .main-navigation--opened .main-navigation__row {
     background-color: transparent;
   }
+
   .main-navigation--opened {
     background-color: transparent;
   }
@@ -57,6 +60,7 @@
   @media (min-width: $tablet-width) {
     min-height: 110px;
   }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -66,67 +70,75 @@
 .main-navigation__top-row {
   //height: 100px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0;
+
   @media (min-width: $tablet-width) {
     min-height: 110px;
   }
 }
 
 .main-navigation__toggle {
-  margin-left: auto;
   width: 50px;
   height: 24px;
+  margin-left: auto;
+  border: none;
   background-color: transparent;
   background-image: url("../img/icons/icon-menu-burger.svg");
-  border: none;
   cursor: pointer;
+
   @media (min-width: $desktop-width) {
     display: none;
   }
 }
 
 .main-navigation__list {
-  display: none;
   position: relative;
   z-index: 1;
-  padding: 0;
+  display: none;
   margin: 0;
-
+  padding: 0;
   list-style: none;
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
 }
+
 .main-navigation__item {
   border-top: 1px solid var(--color-black);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
   background-color: var(--color-dark-blue);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+
   &:last-child {
     border-bottom: 1px solid var(--color-black);
   }
+
   @media (min-width: $desktop-width) {
     margin-right: 78px;
     border: none;
-    box-shadow: none;
     background-color: transparent;
+    box-shadow: none;
+
     &:last-child {
       margin-right: 0;
       border: none;
     }
   }
 }
+
 .main-navigation__link {
   display: block;
+  color: var(--color-white);
   font-size: 18px;
   line-height: 63px;
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-white);
   transition: color 200ms ease 0s;
+
   @media (min-width: $desktop-width) {
     text-transform: none;
   }
@@ -135,11 +147,12 @@
   &:focus {
     color: var(--color-pink);
   }
+
   &:active {
     color: var(--color-white-opacityg);
   }
 }
 
 .main-navigation--no-js .main-navigation__toggle {
-  display: none; 
+  display: none;
 }
