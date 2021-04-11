@@ -152,7 +152,6 @@ exports.images = images;
 exports.webp = createWebp;
 exports.cleanimg = cleanimg;
 
-
 exports.sprite = sprite;
 exports.copy = copy;
 exports.clean = clean;
@@ -160,7 +159,6 @@ exports.clean = clean;
 exports.styles = styles;
 exports.html = html;
 exports.scripts = scripts;
-
 
 exports.build = gulp.series(clean, copy, styles, images, createWebp, sprite, html, scripts);
 exports.default = gulp.series(build, server, watcher);
