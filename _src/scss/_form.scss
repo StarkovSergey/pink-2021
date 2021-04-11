@@ -258,7 +258,6 @@
   }
 }
 
-
 .form__radio-input {
   &:hover + .form__radio-label::before,
   &:focus + .form__radio-label::before {
@@ -378,6 +377,7 @@
   @media (min-width: $tablet-width) {
     .form__item {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 56px;
 
@@ -388,7 +388,18 @@
 
     .form__label {
       padding-right: 20px;
+      padding-bottom: 0;
       padding-left: 0;
+    }
+
+    .form__text-input {
+      width: 483px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .form__text-input {
+      width: 336px;
     }
   }
 }
